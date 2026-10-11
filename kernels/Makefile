@@ -9,7 +9,8 @@ OBJCOPY  := $(CROSS)-objcopy
 OBJDUMP  := $(CROSS)-objdump
 
 # 统一编译选项：RV32 + FP + zicsr/zifencei + M 扩展
-ARCH     := rv32im_zicsr_zifencei_f
+# 注：GCC 12+ 才把 zicsr/zifencei 从 I 拆出来单写；GCC 10 直接写 rv32imf 即可
+ARCH     := rv32imf
 ABI      := ilp32f
 CFLAGS   := -march=$(ARCH) -mabi=$(ABI) -nostdlib -Wl,-Ttext=0x0
 

@@ -20,3 +20,5 @@ lib/test/dump_dev_layer12_down
 
 weights/*.bin
 ref/**/*.bin
+*.cmd
+*.dump

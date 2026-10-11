@@ -1,6 +1,6 @@
 obj-m += gpgpu_drv.o
 
-KDIR := /home/hp/gpgpu-driver/kernel-headers
+KDIR := /home/cxr/kernel-devel/usr/src/kernels/6.6.0-98.0.0.103.oe2403sp2.riscv64
 ARCH := riscv
 CROSS_COMPILE := riscv64-linux-gnu-
 BUILD_DIR := $(PWD)/build
